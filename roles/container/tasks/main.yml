@@ -1,0 +1,15 @@
+---
+# tasks file for container
+
+
+- name: Criando o volume
+  include: criaVolume.yml 
+
+- name: Etapas para a criacao do index
+  include: index.yml
+
+- name: Instalando os containers
+  include: startContainer.yml
+
+...
+

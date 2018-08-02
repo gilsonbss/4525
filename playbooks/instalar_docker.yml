@@ -1,0 +1,7 @@
+---
+
+- name: instalar puppet
+  hosts: docker
+  roles:
+   - docker
+

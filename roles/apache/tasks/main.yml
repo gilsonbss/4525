@@ -1,0 +1,13 @@
+---
+# tasks file for apache
+
+- name: chamando playbook debian
+  include: deb_instalapkg.yaml
+
+- name: chamando playbook centos
+  include: centos_instalapkg.yaml
+
+- name: chamando movimentacao arquivos
+  include: arquivos.yaml
+
+...

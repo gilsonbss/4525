@@ -1,0 +1,16 @@
+---
+
+- name: instalando somente no debian
+  hosts: all
+  task: 
+    - name: instalando pacotes
+      apt:
+        name: "{{item}}"
+      with_items:
+        - vim
+        - sl
+        - nano
+        - dnsutils
+      when: ansible_distribution == "Ubuntu"
+
+...

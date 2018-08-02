@@ -1,0 +1,13 @@
+---
+# tasks file for puppet
+
+- name: Realizando as configuracoes de repositorio
+  include: repos.yml
+
+- name: Instalando o servidor do puppet
+  include: instalar_server.yml
+
+- name: Instalando os agents do puppet
+  include: instalar_agent.yml
+
+...

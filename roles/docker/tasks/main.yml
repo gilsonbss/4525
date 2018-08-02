@@ -1,0 +1,10 @@
+---
+# tasks file for docker
+
+- name: DOCKER Iniciando etapas relacionadas ao repositorio
+  include: repositorios.yml
+
+- name: DOCKER Iniciando etapas relacionadas a instalacao
+  include: instalador.yml
+
+...

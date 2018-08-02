@@ -1,0 +1,9 @@
+---
+- name: instalar apache
+  hosts: all
+  roles:
+   - apache
+   - pacotes 
+
+
+...

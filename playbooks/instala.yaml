@@ -1,0 +1,32 @@
+---
+#- name: Instalando pacotes pre-estabelecidos
+#  hosts: all
+#  tasks:
+#    - name: Instalando...
+#      package:
+#        name: "{{item}}"
+#        update_cache: yes
+#        state: present
+#        with_items:
+#          - vim
+#          - nano
+#          - sl
+#          - ccze
+#          - dnsutils
+
+- name: garantindo pacotes basicos
+  hosts: all
+  tasks:
+    - name: instalando pacotes
+      package:
+        name:  "{{item}}"
+        state: present
+      with_items:
+       - vim
+       - nano
+       - sl
+       - ccze
+       - dnsutils
+
+
+...

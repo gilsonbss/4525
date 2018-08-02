@@ -1,0 +1,32 @@
+---
+
+- name: criando o primeiro container 
+  docker_container:
+    name: index1
+    image: httpd
+    state: started
+    volumes:
+      - index:/usr/local/apache2/htdocs
+    ports:
+      - 8081:80
+#   command: [ "service apache2 start", "/bin/bash" ]
+#    command: /bin/bash
+#    command: service apache2 start
+
+
+
+- name: criando o segundo container 
+  docker_container:
+    name: index2
+    image: httpd
+    state: started
+    volumes:
+      - index:/usr/local/apache2/htdocs
+#      - index:/var/www/html/
+    ports:
+      - 8080:80
+#    command: [ "/bin/bash", "service apache2 start" ]
+#    command: /bin/bash
+#    command: service apache2 start
+
+...

@@ -1,0 +1,7 @@
+- name: instalando pacotes familia CentOS
+  package:
+   name: "{{item}}"
+   state: present
+  with_items:
+   - httpd
+  when: ansible_os_family == "CentOS"

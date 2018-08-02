@@ -1,0 +1,4 @@
+- name: enviando um arquivo index.html para os servidores Debian
+  template:
+   src: ../files/index.html
+   dest: /var/www/html/index.html
